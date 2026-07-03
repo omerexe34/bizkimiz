@@ -496,113 +496,6 @@ h2.sec-title span{
 .tgold{color:var(--gold);}
 .tcursor{display:inline-block;width:7px;height:0.9em;background:var(--orange);animation:blink 1s step-end infinite;vertical-align:text-bottom;}
 
-/* ─── GOOGLE PLAY COUNTDOWN ─── */
-#gplay{
-  background:var(--bg2);
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  padding:7rem 4rem;
-  position:relative;overflow:hidden;
-}
-#gplay::before{
-  content:'';position:absolute;
-  top:50%;left:50%;transform:translate(-50%,-50%);
-  width:800px;height:800px;border-radius:50%;
-  background:radial-gradient(circle,rgba(249,115,22,0.05),transparent 60%);
-  pointer-events:none;
-}
-.gplay-inner{max-width:1000px;margin:0 auto;text-align:center;}
-.gplay-logo-row{
-  display:flex;align-items:center;justify-content:center;gap:1rem;
-  margin-bottom:2.5rem;
-  opacity:0;animation:fadeUp 0.8s 0.1s both;
-}
-.gplay-icon{
-  width:52px;height:52px;
-  background:linear-gradient(135deg,rgba(249,115,22,0.15),rgba(245,158,11,0.1));
-  border:1px solid var(--border-o);
-  border-radius:12px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.6rem;
-  box-shadow:0 0 20px rgba(249,115,22,0.15);
-}
-.gplay-platform-label{
-  font-family:var(--ff-mono);font-size:0.58rem;
-  letter-spacing:0.22em;text-transform:uppercase;
-  color:var(--orange);
-}
-.gplay-title{
-  font-family:var(--ff-display);
-  font-size:clamp(2.8rem,6vw,5.5rem);
-  letter-spacing:0.06em;line-height:1;
-  color:var(--text);
-  margin-bottom:0.75rem;
-}
-.gplay-title span{
-  background:linear-gradient(135deg,var(--gold) 0%,var(--orange) 50%,var(--orange2) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.gplay-sub{
-  font-size:0.95rem;font-weight:300;
-  color:var(--text2);line-height:1.8;
-  margin-bottom:3.5rem;
-}
-.gplay-date-badge{
-  display:inline-flex;align-items:center;gap:0.75rem;
-  background:linear-gradient(135deg,rgba(249,115,22,0.1),rgba(245,158,11,0.06));
-  border:1px solid var(--border-o);
-  padding:0.7rem 1.75rem;
-  font-family:var(--ff-mono);font-size:0.65rem;
-  letter-spacing:0.18em;text-transform:uppercase;
-  color:var(--orange);
-  margin-bottom:3.5rem;
-  position:relative;overflow:hidden;
-}
-.gplay-date-badge::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(249,115,22,0.1),transparent);animation:shimmer 2.5s ease-in-out infinite;}
-.gplay-date-badge .date-icon{color:var(--gold);font-size:0.85rem;}
-
-/* COUNTDOWN */
-.countdown-wrap{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:3rem;}
-.cd-block{
-  background:var(--bg3);
-  border:1px solid var(--border);
-  padding:1.5rem 2rem;
-  min-width:110px;
-  text-align:center;
-  position:relative;overflow:hidden;
-  transition:border-color 0.3s;
-}
-.cd-block::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--orange));}
-.cd-block:hover{border-color:var(--border-o);}
-.cd-num{
-  font-family:var(--ff-display);
-  font-size:3.5rem;line-height:1;
-  background:linear-gradient(135deg,var(--orange),var(--gold));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  display:block;
-  font-variant-numeric:tabular-nums;
-}
-.cd-lbl{
-  font-family:var(--ff-mono);font-size:0.5rem;
-  letter-spacing:0.22em;text-transform:uppercase;
-  color:var(--muted);margin-top:0.5rem;display:block;
-}
-.cd-colon{
-  font-family:var(--ff-display);font-size:3rem;
-  background:linear-gradient(to bottom,var(--orange),var(--gold));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  align-self:center;padding-bottom:1.5rem;
-  animation:colonBlink 1s step-end infinite;
-}
-@keyframes colonBlink{0%,100%{opacity:1;}50%{opacity:0.3;}}
-.countdown-wrap.flex-align{align-items:flex-end;}
-
-.gplay-notice{
-  font-family:var(--ff-mono);font-size:0.6rem;
-  letter-spacing:0.14em;color:var(--text3);
-  display:flex;align-items:center;justify-content:center;gap:0.5rem;
-}
-
 /* ─── CONTACT ─── */
 #contact{
   background:var(--bg);
@@ -708,16 +601,13 @@ footer{
   .contact-grid{grid-template-columns:1fr;}
   h1.hero-title{font-size:clamp(3.5rem,18vw,5.5rem);}
   footer{flex-direction:column;text-align:center;gap:1.5rem;}
-  .countdown-wrap{gap:0.75rem;}
-  .cd-block{min-width:80px;padding:1.25rem 1rem;}
-  .cd-num{font-size:2.8rem;}
-  .cd-colon{font-size:2.4rem;}
+
 }
 @media(max-width:600px){
   .features-grid{grid-template-columns:1fr;}
   .proj-grid{grid-template-columns:1fr;}
   .hero-stats{gap:2rem;}
-  .cd-colon{display:none;}
+
 }
 </style>
 </head>
@@ -739,9 +629,8 @@ footer{
     <li><a href="#about">Hakkımızda</a></li>
     <li><a href="#what">Platform</a></li>
     <li><a href="#projects">Projeler</a></li>
-    <li><a href="#gplay">Google Play</a></li>
     <li><a href="#contact">İletişim</a></li>
-    <li><a href="https://freeridertr.com.tr" target="_blank" rel="noopener" class="nav-badge">Siteye Git ↗</a></li>
+    <li><a href="https://freerider.tr" target="_blank" rel="noopener" class="nav-badge">Siteye Git ↗</a></li>
   </ul>
   <div class="nav-hamburger" id="navHamburger" aria-label="Menü" role="button" tabindex="0">
     <span></span><span></span><span></span>
@@ -752,9 +641,8 @@ footer{
   <a href="#about" class="mob-link">Hakkımızda</a>
   <a href="#what" class="mob-link">Platform</a>
   <a href="#projects" class="mob-link">Projeler</a>
-  <a href="#gplay" class="mob-link">Google Play</a>
   <a href="#contact" class="mob-link">İletişim</a>
-  <a href="https://freeridertr.com.tr" target="_blank" rel="noopener" class="mob-link">Siteye Git ↗</a>
+  <a href="https://freerider.tr" target="_blank" rel="noopener" class="mob-link">Siteye Git ↗</a>
 </div>
 
 <div class="wrap">
@@ -768,12 +656,12 @@ footer{
     Paylaş, yarış, keşfet — bisiklet tutkunları için inşa edildi.
   </p>
   <div class="hero-cta-row">
-    <a href="https://freeridertr.com.tr" target="_blank" rel="noopener" class="btn-primary">Platforma Git ↗</a>
-    <a href="#gplay" class="btn-ghost">Google Play →</a>
+    <a href="https://freerider.tr" target="_blank" rel="noopener" class="btn-primary">Platforma Git ↗</a>
+    <a href="#about" class="btn-ghost">Hakkımızda →</a>
   </div>
   <div class="maint-banner">
     <span class="icon">🔧</span>
-    <p>freeridertr.com şu an bakımda — freeridertr.com.tr üzerinden erişebilirsiniz.</p>
+    <p>freeridertr.com şu an bakımda — freerider.tr üzerinden erişebilirsiniz.</p>
   </div>
   <div class="hero-stats">
     <div class="stat-item">
@@ -810,23 +698,22 @@ footer{
       <div class="about-body reveal">
         <p>
           Merhaba — ben <strong>freeridertr'ın kurucusuyum</strong>. 
-          Türkiye'nin bisiklet kültürünü dijital dünyaya taşımak için yola çıktım. 
-          Bir proje tasarımcısı olarak her satır kodu, her arayüz kararını 
-          <em>bu topluluğun gerçek ihtiyaçları</em> için aldım.
+          Altyapısını <strong>7 Mart 2026</strong>'da kurduğum bu platformu, kodlamasından tasarımına kadar <strong>tamamen tek başıma</strong> geliştiriyorum.
+          Türkiye'nin bisiklet kültürünü dijital dünyaya taşımak için çıktığım bu yolda her satır kodu ve her arayüz kararını 
+          <em>topluluğun gerçek ihtiyaçları</em> için yalnız başıma aldım.
         </p>
         <p>
-          freeridertr, büyük yatırımların değil; <strong>tutkunun, sabahın 3'ünde yazılan 
-          kodun ve kullanıcı geri bildirimlerinin</strong> ürünü. Türkiye'de bir startup olmanın 
-          ne anlama geldiğini biliyorum — kısıtlı kaynakla, sınırsız hayal gücüyle çalışıyorum.
+          freeridertr, büyük ekiplerin veya devasa yatırımların değil; <strong>tek bir kişinin tutkusunun, sabahın 3'ünde yazılan 
+          kodların ve sarsılmaz bir inancın</strong> ürünü. Kısıtlı kaynaklarla ama sınırsız hayal gücüyle tek tabanca bu platformu büyütmeye devam ediyorum.
         </p>
         <p>
           Hedefim basit: <em>Türkiye'nin her köşesindeki bisikletçiyi</em> bir çatı altında 
-          toplamak, onlara dünya kalitesinde bir platform sunmak. 
-          Henüz başlangıçtayız — ama her geçen gün büyüyoruz.
+          toplamak ve onlara dünya standartlarında bir platform sunmak. 
+          Henüz başlangıçtayız — ama yalnız olmama rağmen hızla büyüyoruz.
         </p>
         <div class="badge-row">
-          <span class="badge">Proje Tasarımcısı</span>
-          <span class="badge">Full-Stack</span>
+          <span class="badge">Solo Geliştirici</span>
+          <span class="badge">Kurucu & Tasarımcı</span>
           <span class="badge">Türkiye</span>
         </div>
       </div>
@@ -835,15 +722,15 @@ footer{
       <div class="id-card">
         <div class="id-avatar">F</div>
         <div class="id-name">freeridertr</div>
-        <div class="id-role">Kurucu & Proje Tasarımcısı</div>
+        <div class="id-role">Kurucu & Solo Geliştirici</div>
         <div class="id-rows">
           <div class="id-row">
             <span class="id-key">Konum</span>
             <span class="id-val">🇹🇷 Türkiye</span>
           </div>
           <div class="id-row">
-            <span class="id-key">Rol</span>
-            <span class="id-val">Kurucu / Geliştirici</span>
+            <span class="id-key">Kuruluş</span>
+            <span class="id-val">7 Mart 2026</span>
           </div>
           <div class="id-row">
             <span class="id-key">Sürüm</span>
@@ -851,7 +738,7 @@ footer{
           </div>
           <div class="id-row">
             <span class="id-key">Platform</span>
-            <span class="id-val">freeridertr.com.tr</span>
+            <span class="id-val">freerider.tr</span>
           </div>
           <div class="id-row">
             <span class="id-key">Durum</span>
@@ -990,7 +877,7 @@ footer{
             <span class="tech-pill">Python</span>
             <span class="tech-pill">Cloudflare R2</span>
           </div>
-          <a href="https://freeridertr.com.tr" target="_blank" rel="noopener" class="proj-link">Ziyaret Et →</a>
+          <a href="https://freerider.tr" target="_blank" rel="noopener" class="proj-link">Ziyaret Et →</a>
         </div>
       </div>
 
@@ -1017,7 +904,7 @@ footer{
             <span class="tech-pill">LLaMA</span>
             <span class="tech-pill">Python</span>
           </div>
-          <a href="https://freeridertr.com.tr" target="_blank" rel="noopener" class="proj-link">Platforma Git →</a>
+          <a href="https://freerider.tr" target="_blank" rel="noopener" class="proj-link">Platforma Git →</a>
         </div>
       </div>
 
@@ -1032,7 +919,7 @@ footer{
             <li>Şu an bakım modunda</li>
             <li>Yakında uluslararası içerik</li>
             <li>Yeni özellikler planlanıyor</li>
-            <li>Güncel platform: freeridertr.com.tr</li>
+            <li>Güncel platform: freerider.tr</li>
           </ul>
         </div>
         <div class="proj-card-footer">
@@ -1067,57 +954,6 @@ footer{
 
 <div class="divider"></div>
 
-<!-- ─── GOOGLE PLAY COUNTDOWN ─── -->
-<section id="gplay">
-  <div class="gplay-inner">
-    <div class="gplay-logo-row reveal">
-      <div class="gplay-icon">▶</div>
-      <div>
-        <div class="gplay-platform-label">Google Play Store</div>
-        <div style="font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.15em;color:var(--muted);margin-top:2px;">Android Uygulama</div>
-      </div>
-    </div>
-    <h2 class="gplay-title reveal">Mobil <span>Uygulama</span><br>Geliyor</h2>
-    <p class="gplay-sub reveal">freeridertr artık cebinizde. Tüm özellikler, her zaman yanınızda.</p>
-    <div class="reveal" style="display:flex;justify-content:center;margin-bottom:2.5rem;">
-      <div class="gplay-date-badge">
-        <span class="date-icon">📅</span>
-        Google Play Çıkış Tarihi &nbsp;—&nbsp; <strong style="color:var(--gold);">2 MAYIS 2026</strong>
-      </div>
-    </div>
-
-    <div class="countdown-wrap flex-align reveal" id="countdown">
-      <div class="cd-block">
-        <span class="cd-num" id="cd-days">000</span>
-        <span class="cd-lbl">Gün</span>
-      </div>
-      <div class="cd-colon">:</div>
-      <div class="cd-block">
-        <span class="cd-num" id="cd-hours">00</span>
-        <span class="cd-lbl">Saat</span>
-      </div>
-      <div class="cd-colon">:</div>
-      <div class="cd-block">
-        <span class="cd-num" id="cd-mins">00</span>
-        <span class="cd-lbl">Dakika</span>
-      </div>
-      <div class="cd-colon">:</div>
-      <div class="cd-block">
-        <span class="cd-num" id="cd-secs">00</span>
-        <span class="cd-lbl">Saniye</span>
-      </div>
-    </div>
-
-    <p class="gplay-notice reveal">
-      <span>✦</span>
-      Çıkış günü bildirim almak için platformda takipte kalın
-      <span>✦</span>
-    </p>
-  </div>
-</section>
-
-<div class="divider"></div>
-
 <!-- ─── CONTACT ─── -->
 <section id="contact">
   <div class="contact-inner">
@@ -1134,7 +970,7 @@ footer{
       <div class="contact-card reveal reveal-delay-1">
         <span class="cc-icon">🌐</span>
         <div class="cc-label">Ana Platform</div>
-        <div class="cc-val"><a href="https://freeridertr.com.tr" target="_blank" rel="noopener">freeridertr.com.tr</a></div>
+        <div class="cc-val"><a href="https://freerider.tr" target="_blank" rel="noopener">freerider.tr</a></div>
         <div class="cc-note">Aktif ve erişilebilir</div>
       </div>
       <div class="contact-card reveal reveal-delay-2">
@@ -1152,7 +988,7 @@ footer{
   <span class="footer-brand">FREERIDERTR</span>
   <span class="footer-copy">© 2024–2026 freeridertr. Türkiye'den 🇹🇷</span>
   <div class="footer-links">
-    <a href="https://freeridertr.com.tr" target="_blank" rel="noopener">Platform</a>
+    <a href="https://freerider.tr" target="_blank" rel="noopener">Platform</a>
     <a href="mailto:destek.freeridertr@gmail.com">Destek</a>
     <a href="#hero">Yukarı ↑</a>
   </div>
@@ -1281,37 +1117,6 @@ footer{
     });
   },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   items.forEach(el=>obs.observe(el));
-})();
-
-// ─── COUNTDOWN TIMER ───
-(function(){
-  const target=new Date('2026-05-02T00:00:00').getTime();
-  const dEl=document.getElementById('cd-days');
-  const hEl=document.getElementById('cd-hours');
-  const mEl=document.getElementById('cd-mins');
-  const sEl=document.getElementById('cd-secs');
-
-  function pad(n,w){return String(Math.max(0,n)).padStart(w,'0');}
-
-  function tick(){
-    const now=Date.now();
-    const diff=target-now;
-    if(diff<=0){
-      dEl.textContent='000'; hEl.textContent='00';
-      mEl.textContent='00'; sEl.textContent='00';
-      return;
-    }
-    const d=Math.floor(diff/86400000);
-    const h=Math.floor((diff%86400000)/3600000);
-    const m=Math.floor((diff%3600000)/60000);
-    const s=Math.floor((diff%60000)/1000);
-    dEl.textContent=pad(d,3);
-    hEl.textContent=pad(h,2);
-    mEl.textContent=pad(m,2);
-    sEl.textContent=pad(s,2);
-  }
-  tick();
-  setInterval(tick,1000);
 })();
 
 // ─── AMBIENT MUSIC (Web Audio API) ───
