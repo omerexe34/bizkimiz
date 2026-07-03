@@ -365,7 +365,7 @@ h2.sec-title span{
 .id-row:last-child{border-bottom:none;}
 .id-key{font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);}
 .id-val{font-size:0.83rem;font-weight:500;}
-.online-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#22c55e;margin-right:6px;box-shadow:0 0 8px rgba(34,197,94,0.5);animation:blink 2s ease-in-out infinite;}
+.online-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:6px;box-shadow:0 0 8px rgba(245,158,11,0.5);animation:blink 2s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
 
 /* ─── WHAT IS ─── */
@@ -425,7 +425,7 @@ h2.sec-title span{
   padding:0.3rem 0.75rem;
   display:inline-block;margin-bottom:1rem;
 }
-.status-live{background:rgba(34,197,94,0.08);color:#22c55e;border:1px solid rgba(34,197,94,0.18);}
+.status-live{background:rgba(245,158,11,0.08);color:var(--gold);border:1px solid var(--border-g);}
 .status-beta{background:rgba(249,115,22,0.08);color:var(--orange);border:1px solid var(--border-o);}
 .status-dev{background:rgba(74,82,96,0.15);color:var(--muted);border:1px solid var(--border);}
 .proj-name{font-family:var(--ff-display);font-size:2rem;letter-spacing:0.06em;margin-bottom:0.5rem;}
@@ -485,13 +485,13 @@ h2.sec-title span{
   display:flex;align-items:center;gap:0.6rem;
 }
 .tdot{width:10px;height:10px;border-radius:50%;}
-.tdot-r{background:#ff5f57;}.tdot-y{background:#febc2e;}.tdot-g{background:#28c840;}
+.tdot-r{background:rgba(249,115,22,0.4);}.tdot-y{background:var(--gold);}.tdot-g{background:var(--orange);}
 .term-title{font-size:0.58rem;color:var(--muted);margin-left:0.5rem;letter-spacing:0.15em;}
 .term-body{padding:1.75rem;font-size:0.7rem;line-height:2.15;}
 .tp{color:var(--orange);}
 .tc{color:rgba(237,232,224,0.85);}
-.tg{color:#4ade80;}
-.tb{color:#60a5fa;}
+.tg{color:var(--orange);}
+.tb{color:var(--gold);}
 .tm{color:var(--muted);}
 .tgold{color:var(--gold);}
 .tcursor{display:inline-block;width:7px;height:0.9em;background:var(--orange);animation:blink 1s step-end infinite;vertical-align:text-bottom;}
@@ -786,10 +786,6 @@ footer{
         <div class="feat-title">İnteraktif Harita</div>
         <div class="feat-desc">Özel bisiklet noktaları, rota paylaşımı ve yakınındaki sürücüleri keşfetme. Sapphire ikonlarıyla kişiselleştirilebilir.</div>
       </div>
-      <div class="feat-card reveal reveal-delay-1">
-        <span class="feat-icon">🎭</span>
-        <div class="feat-title">3D Avatar & Profil</div>
-        <div class="feat-desc">Ready Player Me entegrasyonuyla kişisel 3D avatar. Alev/buz efektleri, özel isim renkleri ve Premium rozetler.</div>
       </div>
       <div class="feat-card reveal reveal-delay-2">
         <span class="feat-icon">💬</span>
@@ -863,7 +859,6 @@ footer{
           <ul class="proj-feature-list">
             <li>Bisiklet sosyal medya akışı (fotoğraf + video)</li>
             <li>Haftalık yarış sistemi ve liderlik tablosu</li>
-            <li>3D avatar ve profil kişiselleştirme</li>
             <li>Gerçek zamanlı mesajlaşma (sesli dahil)</li>
             <li>İnteraktif rota haritası</li>
             <li>Plus abonelik sistemi (Google Play IAP)</li>
@@ -907,13 +902,6 @@ footer{
           <a href="https://freerider.tr" target="_blank" rel="noopener" class="proj-link">Platforma Git →</a>
         </div>
       </div>
-
-      <div class="proj-card reveal">
-        <div class="proj-card-header">
-          <span class="proj-status status-dev">⊘ Bakımda</span>
-          <div class="proj-name">FREERIDERTR.COM</div>
-          <div class="proj-tagline">Uluslararası alan adı — yakında yeni içerik ve hizmetlerle yayına alınacak.</div>
-        </div>
         <div class="proj-card-body">
           <ul class="proj-feature-list">
             <li>Şu an bakım modunda</li>
@@ -973,10 +961,6 @@ footer{
         <div class="cc-val"><a href="https://freerider.tr" target="_blank" rel="noopener">freerider.tr</a></div>
         <div class="cc-note">Aktif ve erişilebilir</div>
       </div>
-      <div class="contact-card reveal reveal-delay-2">
-        <span class="cc-icon">🔧</span>
-        <div class="cc-label">Uluslararası Site</div>
-        <div class="cc-val"><a href="https://freeridertr.com" target="_blank" rel="noopener">freeridertr.com</a></div>
         <div class="cc-note">Şu an bakımda</div>
       </div>
     </div>
